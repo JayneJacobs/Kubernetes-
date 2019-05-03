@@ -1,0 +1,32 @@
+# Default values for helm_charts
+# Declare values for templates
+
+replicaCount: 1
+storage: 10Gi
+
+image:
+   repo: ghost
+   tag: stable
+
+pod:
+  port: 2368
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  enabled: false
+  tier: Frontend
+  type: LoadBalancer
+  port: 2368
+
+deployments:
+  all_apps:
+    - api
+    - chat
+
+api:
+  replicaCount: 3
+
+
+

@@ -1,0 +1,10 @@
+package-namd/
+  charts/
+  templates/
+  Chart.yaml
+  LICENCE
+  README.md
+  requirements.yaml
+  values.yaml
+
+  

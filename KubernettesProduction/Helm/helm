@@ -1,0 +1,83 @@
+  103  helm install -n ghost-demo .
+
+  108  helm history
+  
+  110  helm history ghost
+  119  gcloud container clusters get-credentials jaynejacobs-007helm --zone us-central1-a --project jaynejacobs-007
+    127  brew install kubernetes-helm
+  131  helm init --service-account tiller --upgrade
+  132  helm repo update
+   153  helm install --name mongodb-demo stable/mongodb-replicaset
+   168  helm repo update
+    228  helm install --debug --dry-run .
+  229  helm install -n ghost-demo .
+    234  helm list
+  235  helm install -n ghost-demo .
+  237  helm install -n ghost-demo .
+  238  helm del --purge ghost-demo
+  240  helm install -n ghost-demo .
+  241  helm del --purge ghost-demo
+  242  helm install -n ghost-demo .
+
+  246  helm install --debug  --dry-run  .
+  247  helm del --purge ghost-demo
+  248  helm install --debug  --dry-run  .
+  249  helm install --debug  --dry-run  .
+  250  helm del --purge ghost-demo
+  251  helm install --debug  --dry-run  .
+  252  helm install --debug  --dry-run  .
+  253  helm del --purge ghost-demo
+  254  helm install --debug  --dry-run  .
+  255  helm install --debug  --dry-run  .
+  256  helm install --debug  --dry-run  .
+  257  helm del --purge ghost-demo
+  258  helm install --debug  --dry-run  .
+  260  helm del --purge ghost-demo
+  261  helm install -n ghost-demo . helm install --debug  --dry-run  .
+  262  helm install --debug  --dry-run  .
+  263  helm del --purge ghost-demo
+  264  helm install --debug  --dry-run  .
+  265  helm status
+  266  helm list
+  267  helm create -h
+  268  helm create quick-demo
+  273  helm fetch -d . stable/kibana
+  274  helm fetch -d . stable/kibana --untar
+  276  helm history kibana-demo
+  277  helm list
+  278  helm install -n kibana-demo .
+  279  helm status kibana
+  280  helm status kibana-demo
+  282  helm update
+  283  helm status kibana-demo
+  284  helm upgrade  kibana-demo
+  285  helm upgrade  kibana-demo .
+  286  helm history  kibana-demo
+  287  helm rollback  kibana-demo 1
+  288  helm history  kibana-demo
+  292  helm instal -n default-demo
+  293  helm install -n default-demo
+  294  helm install -n default-demo .
+  295  helm install --debug  --dry-run  .
+  296  helm del --purge ghost-demo
+  297  helm install -n default-demo .
+  298  helm install -n default-demo .
+  299  helm del --purge ghost-demo
+  300  helm install -n default-demo .
+  301  helm del --purge default-demo
+  302  helm install -n default-demo .
+  303  helm del --purge default-demo
+  304  helm install -n default-demo .
+  305  helm del --purge default-demo
+  306  helm install -n default-demo .
+  307  helm install -n default-demo .
+  308  helm del --purge default-demo
+  309  helm install -n default-demo .
+  310  helm install -n default-demo -f prod.yaml
+  312  helm install -n default-demo -f prod.yaml .
+  313  helm install --debug  --dry-run  .
+  314  helm inspect values
+
+  501  history | grep helm
+  502  history | grep helm >> helm commands
+  503  history | grep helm >> helm

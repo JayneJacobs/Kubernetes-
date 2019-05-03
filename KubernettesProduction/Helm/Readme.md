@@ -42,16 +42,31 @@ Helm tool;
   official and unoffficial charts. 
 
   install helm. 
+https://github.com/helm/helm/releases
 
  Google Cloud account/project
  Gcloud SDK
-
+01  tar -zxvf helm-v2.13.1-darwin-amd64.tar.gz 
+  502  ls
+  503  mv darwin-amd64/helm usr/local/bin/helm
+  504  cd darwin-amd64/
+  505  ls
+  506  mv helm /usr/local/bin/
 ## Setup Tiller
 
 ```sh
+
+get pods --all-namespaces=true
+NAMESPACE     NAME                                                            READY   STATUS    RESTARTS   AGE
+kube-system   event-exporter-v0.2.3-f9c896d75-kncs9                           2/2     Running   0          14m
+
+
 kubectl delete clusterrolebinding tiller
- kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
- helm install --name mongodb-demo stable/mongodb-replicaset
+ kubectl --namespace=kube-system create serviceaccount tiller
+serviceaccount/tiller created
+
+ jjacob151$ kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+clusterrolebinding.rbac.authorization.k8s.io/tiller created
 
 clusterrolebinding.rbac.authorization.k8s.io/tiller created
 
@@ -59,7 +74,7 @@ helm init --service-account tiller --upgrade
     
  helm repo update
 ```
-#Repair
+# MongoDB
 
 ```helm install --name mongodb-demo stable/mongodb-replicaset
 NAME:   mongodb-demo
