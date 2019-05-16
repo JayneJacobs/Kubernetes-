@@ -26,6 +26,7 @@ Pod- instances of a container or groupings of containers.
 Services - endpoints expose ports 
 
 # kubectl 
+![Image](KubernetesOverview.png)
 $ kubectl version
 Client Version: version.Info{Major:"1", Minor:"13", GitVersion:"v1.13.3", GitCommit:"721bfa751924da8d1680787490c54b9179b1fed0", GitTreeState:"clean", BuildDate:"2019-02-04T04:49:22Z", GoVersion:"go1.11.5", Compiler:"gc", Platform:"darwin/amd64"}
 Unable to connect to the server: dial tcp 192.168.99.106:8443: i/o timeout
@@ -68,6 +69,7 @@ minikube service tomcat-deployment --url
 http://192.168.99.106:30928
 
 ### Trouble Shooting
+![Image](KubernetesContainers.png)
 Unable to connect to the server: dial tcp 192.168.99.100:8443: i/o timeout
 
 Solution:
@@ -139,7 +141,8 @@ kubectl label pods <pod name> healthy=fasle
  
 kubectl run <name> —image=image
 kubectl run hazelcast --image=hazelcast/hazelcast --port=5701
-# the hazelcast docker image has been moved to hazelcast/hazelcast (https://hub.docker.com/r/hazelcast/hazelcast
+#### the hazelcast docker image has been moved to hazelcast/hazelcast (https://hub.docker.com/r/hazelcast/hazelcast
+
  
 kubectl describe pod
 

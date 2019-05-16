@@ -1,4 +1,26 @@
-  103  helm install -n ghost-demo .
+  
+  
+  
+  502  chmod 777 install.
+  503  chmod 777 install.sh 
+  504  ./install.sh
+  505  gcloud init
+  506  source ~/.bash_profile
+  507  gcloud init
+  508  kubectl get pods
+  509  helm init
+  510  gcloud container clusters get-credentials jaynejacobs-007helm --zone us-east1-b --project jaynejacobs-007
+  511  kubectl get services
+  512  kubectl get services
+  513  gcloud container clusters get-credentials jaynejacobs-007helm --zone us-east1-b --project jaynejacobs-007
+  514  kubectl get services
+  515  kubectl get services
+  516  gcloud container clusters get-credentials jaynejacobs-007helm --zone us-east1-b --project jaynejacobs-007
+  517  gcloud container clusters get-credentials jaynejacobs-007helm --zone us-east1-b --project jaynejacobs-007
+  518  kubectl get services
+  519  helm init
+  520  kubectl get pods --namespace kube-system
+103  helm install -n ghost-demo .
 
   108  helm history
   

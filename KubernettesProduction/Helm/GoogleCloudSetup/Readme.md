@@ -1,30 +1,39 @@
-# Set up Google Cloud
+
+ # Google Cloud account/project
+ # Gcloud SDK
+
 
 https://console.cloud.google.com/
 
+```
 git pull
-    gcloud init
+ 
   chmod 777 install.sh 
   ./install.sh 
   gcloud init
-  history | grep source
+ 
+
   source ~/.bash_profile
-  gcloud init
+  
   gcloud init
   use connect url
   gcloud auth login
 
   kubectl get pods
   kubectl get services --all-namespaces=true
+```
 
+# Install Helm
 
-Install Helm
+```
     brew install kubernetes-helm
-
-     or get the binary
+```
+  * or get the binary
+  ```
       cp /usr/local/bin
+```
 
-Mongo DB
+## Mongo DB
 
     Collections and Documents. 
     Build Master first and connect to master

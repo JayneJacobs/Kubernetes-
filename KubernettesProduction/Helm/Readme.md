@@ -1,39 +1,38 @@
 # Helm
 
 
-Stefan Thorpe will talk you through one of the most popular package managers for Kubernetes, Helm.
+* A Simple way to package and configure.  in on deployment. 
 
-Through a series of of lectures, you would see Helm helps to manage Kubernetes applications: Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application.
+* Do not repeat coding principles 
 
-Stefan Thorpe is a certified cloud architect and has decades of experience in both cloud computing and DevOps industry.
+* Configure a package and manage dependencies. 
 
-Simple way to package and configure.  in on deployment. 
+* Update and remove containers. 
 
-Do not repeat coding principles 
-
-configure a package and manage dependencies. 
-
-Update and remove containers. 
-
-Define run, upgrade for public distribution. 
+* Define run, upgrade for public distribution. 
 
 
-## Helm Charts: 
- Kubernettes Yamls. 
+## Helm Charts:
 
- helm/tiller runs on Kubernetes clusters. 
+ * Kubernettes Yamls. 
 
- Helm sends charts to Tiller Server.  and tiller installs the package. 
+ * helm/tiller runs on Kubernetes clusters. 
 
-Tiller comiles yamls and applies them to cluster. 
+ * Helm sends charts to Tiller Server.  and tiller installs the package. 
+   Basic
+    ```
+    helm install stable\chartName
+    ```
+
+* Tiller compiles yamls and applies them to cluster. 
 
 Single CLI command line. 
 
 Helm tool; 
- Package description (yaml)
- Templates: Yaml files
+  *Package description (yaml)
+    Templates: Yaml files
 
- Accessign Helm Charts. 
+ Accessing Helm Charts.
   repository
   Helm install; location of charts; chart name. 
 
@@ -41,39 +40,42 @@ Helm tool;
 
   official and unoffficial charts. 
 
-  install helm. 
+#Install helm. 
+
 https://github.com/helm/helm/releases
 
- Google Cloud account/project
- Gcloud SDK
-01  tar -zxvf helm-v2.13.1-darwin-amd64.tar.gz 
-  502  ls
-  503  mv darwin-amd64/helm usr/local/bin/helm
-  504  cd darwin-amd64/
-  505  ls
-  506  mv helm /usr/local/bin/
+
+ tar -zxvf helm-v2.13.1-darwin-amd64.tar.gz 
+ 
+  mv darwin-amd64/helm usr/local/bin/helm
+   cd darwin-amd64/
+ 
+ mv helm /usr/local/bin/
+
 ## Setup Tiller
 
 ```sh
 
-get pods --all-namespaces=true
-NAMESPACE     NAME                                                            READY   STATUS    RESTARTS   AGE
-kube-system   event-exporter-v0.2.3-f9c896d75-kncs9                           2/2     Running   0          14m
+kubectl get pods --all-namespaces=true
+NAMESPACE     NAME    READY   STATUS    RESTARTS                   AGE
+kube-system   event-exporter-v0.2.3-f9c896d75-kncs9  2/2     Running   0          14m
 
 
 kubectl delete clusterrolebinding tiller
- kubectl --namespace=kube-system create serviceaccount tiller
+kubectl --namespace=kube-system create serviceaccount tiller
 serviceaccount/tiller created
 
- jjacob151$ kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+
 clusterrolebinding.rbac.authorization.k8s.io/tiller created
 
 clusterrolebinding.rbac.authorization.k8s.io/tiller created
 
 helm init --service-account tiller --upgrade
-    
- helm repo update
+
+helm repo update
 ```
+
 # MongoDB
 
 ```helm install --name mongodb-demo stable/mongodb-replicaset
