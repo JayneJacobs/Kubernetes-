@@ -78,7 +78,8 @@ helm repo update
 
 # MongoDB
 
-```helm install --name mongodb-demo stable/mongodb-replicaset
+```sh
+helm install --name mongodb-demo stable/mongodb-replicaset
 NAME:   mongodb-demo
 LAST DEPLOYED: Wed May  1 18:54:51 2019
 NAMESPACE: default
